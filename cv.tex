@@ -47,171 +47,122 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES
 %----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
+\documentclass[11pt]{article}
 
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
-\usepackage{tabularx}
-
-%for lists within experience section
+\usepackage[
+  top=0.4in,
+  bottom=0.4in,
+  left=0.4in,
+  right=0.4in
+]{geometry}
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
-%for social icons
+\usepackage{hyperref}
 \usepackage{fontawesome5}
+\usepackage{titlesec}
+\titlespacing*{\section}
+  {0pt}    % left margin
+  {10pt}   % space BEFORE section
+  {4pt}    % space AFTER section
+\usepackage{mathpazo}
 
-%debug page outer frames
-%\usepackage{showframe}
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\setlength{\parindent}{0pt}
 
-
-% job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
-
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
-
-
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
-\pagestyle{empty} 
+%----------------------
+% Header
+%----------------------
+\begin{center}
+    {\LARGE \textbf{Sophia Qiu}} \\
+    \vspace{6pt}
+    \faEnvelope\ \href{mailto:sophia.qiu@mail.utoronto.ca}{sophia.qiu@mail.utoronto.ca} \quad
+    \faPhone\ (647)-619-8986 \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/sophiajzq}{sophiajzq} \quad
+    \faMapMarker\ Toronto, ON \quad
+\end{center}
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
+\vspace{-6pt}
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
+%----------------------
+% Education
+%----------------------
+\section*{Education}
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
-\end{tabularx}
+\textbf{University of Toronto, \textit{Munk School of Global Affairs \& Public Policy}} \hfill \textbf{Toronto, ON, Canada} \\
+Master of Public Policy, \textit{Entrance Scholarship} \hfill Sept 2025 -- May 2027 (Expected)
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
+\vspace{4pt}
 
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically compiled and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+\textbf{University of Chicago, \textit{Committee on International Relations}} \hfill \textbf{Chicago, IL, USA} \\
+Graduate Studies in International Political Economy and Development, \textit{Entrance Scholarship} \hfill Oct 2019 -- Jun 2021
 
-%Experience
-\section{Work Experience}
+\vspace{4pt}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
+\textbf{Emory University, \textit{College of Arts and Sciences}} \hfill \textbf{Atlanta, GA, USA} \\
+Bachelor of Arts, \textit{Double Major}: International Studies and Econometrics \hfill Aug 2016 -- May 2019
 
+%----------------------
+% Experience
+%----------------------
+\section*{Professional Experience}
 
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
-  
-%Projects
-\section{Projects}
+\textbf{BOCOM International} \hfill \textbf{Beijing, China} \\
+\textit{Associate} \hfill Aug 2021 -- Jun 2025
+\begin{itemize}
+    \item Created 100+ PowerPoint pitchbooks with Excel	graphs and pivot tables	for	clients (renewable energy, biotech,	TMT, consumer),	producing pitch	materials directly	praised	by	C-suite	clients	and	used in	investor meetings.	
+    \item Built	10+	interactive	Excel	databases	with	formulas	and	visualization	to	track	market	trends,	solving	complex	data organization challenges	and	enabling	rapid	analysis	across	the	department,	increasing	efficiency	by	50\%.
+    \item Contributed	to	5	completed	Hong	Kong	IPOs	through	financial	analysis,	PE/PS	valuation	models,	investor-facing	materials and	stock	intakes.	
+    \item Advised	3	pre-IPO	companies	on	business	planning	and	investor	messaging,	translating	management	interviews	into	
+structured	strategic	plans	and	multi-draft	roadshow	decks.	
+    \item Promoted	from	Analyst	to	Associate	in	18	months,	significantly	ahead	of	firm	average,	in	recognition	of	initiative,	
+analytical	rigor,	and	reliability.	
+\end{itemize}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+\vspace{4pt}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\textbf{China Arms Control and Disarmament Association} \hfill \textbf{Beijing, China} \\
+\textit{Intern, Secretariat} \hfill Jul 2019 -- Sept 2019
+\begin{itemize}
+    \item Drafted	10+	concise	policy	briefs	on	foreign	policy	topics	(biowarfare,	nuclear	disarmament)	for	secretary	general	using	multilingual	sources;	delivered	rapid-turnaround	summaries	for	high-level	meetings.	
+    \item Researched	and	authored	10+	analytical	policy	reports	on	sanctions,	export	controls,	and	emerging	security	issues	using	
+English	sources	and	data;	synthesized	indings	into	comprehensive	Chinese	reports	for	senior	staff.
+    \item Served	as	English	liaison	in	meetings	with	the	Nuclear	Threat	Initiative	(NTI)	and	U.S.	experts;	supported	conference	
+logistics,	agenda	preparation,	and	participant	coordination.	
+\end{itemize}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+\vspace{4pt}
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+\textbf{Xinhua News Agency} \hfill \textbf{Manhattan, NY, USA} \\
+\textit{Intern, Journalist} \hfill May 2018 -- Jul 2018
+\begin{itemize}
+    \item Authored	15+	bilingual	(English/Chinese)	news	and	feature	articles	on	U.S.	political,	economic,	and	cultural	topics	for	
+Xinhuanet;	several	pieces	were	featured	on	its	Twitter	account,	including	three	selected	as	“top	articles	of	the	week”	and	
+one	interview	that	generated	150+	retweets.	
+    \item Conducted	20+	interviews,	from	on-camera	Times	Square	street	interviews	to	individual	conversations	with	New	York	
+residents;	independently	pitched	and	developed	story	ideas.	
+    \item Covered	major	events	alongside	senior	correspondents	and	contributed	ield	notes	and	reporting	used	in	daily	news	
+coverage.	
+\end{itemize}
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
+\vspace{4pt}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+\textbf{Law Office of Gary S. Park, P.C.} \hfill \textbf{Flushing, NY, USA} \\
+\textit{Intern} \hfill May 2017 -- Jun 2017
+\begin{itemize}
+    \item Prepared	and	organized	legal	documentation	for	15+	clients	iling	9/11	Victim	Compensation	Fund	claims;	assisted	non
+English-speaking	clients	with	translation,	case	intake,	and	evidence	preparation.	
+    \item Coordinated	with	police	departments,	insurance	companies,	and	partner	law	irms	to	obtain	required	incident	reports	
+and	supporting	documents;	led	a	peer	intern	in	managing	intake	worklows	and	client	communication.	
+\end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
+%----------------------
+% Additional Info
+%----------------------
+\section*{Additional Information}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+\textbf{Languages:} Chinese (Native), English (Proficient), Japanese (Fluent), French (Basic), Korean (Basic) \\
+\textbf{Skills:} C++, Java; R, Stata; Advanced Excel \& PowerPoint
 
 \end{document}
